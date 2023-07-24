@@ -1,0 +1,28 @@
+
+# asdf install
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+# asdf plugin setting & install
+asdf plugin-add erlang
+asdf plugin-add elixir
+asdf plugin-add nodejs
+asdf install
+elixir -v
+ 
+# postgreSQL run
+docker-compose up -d
+docker ps
+ 
+ 
+cd chat/
+mix deps.get
+mix ecto.create
+mix phx.server
+ 
+ 
+ 
+ 
+ 
+ 
